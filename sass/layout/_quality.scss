@@ -1,0 +1,30 @@
+.quality {
+  padding-bottom: 0;
+}
+
+.service-list {
+  --card-item: 3;
+}
+
+.qualiti-item {
+  display: flex;
+
+  height: 120px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-background-color);
+
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.quality-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+
+  text-transform: uppercase;
+  color: var(--primary-title-color);
+}
