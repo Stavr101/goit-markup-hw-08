@@ -2,9 +2,19 @@
   padding-bottom: 0;
 }
 
-.service-list {
-  --card-item: 3;
-}
+// @media screen and (min-width: 768px) {
+//     display: block;
+//     .header-link {
+//       margin-bottom: 10px;
+//     }
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     display: flex;
+//     .item:not(:last-child) {
+//       margin-right: 50px;
+//     }
+//   }
 
 .qualiti-item {
   display: flex;

@@ -30,6 +30,25 @@
           <a href="" class="logo link"
             >Web<span class="logo__black">Studio</span></a
           >
+          <button type="button" class="menu-button is-open" data-menu>
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="icon-menu"
+                data-menu-open
+                href="./images/sprite.svg#menu"
+              ></use>
+              <use
+                class="icon-close"
+                data-menu-close
+                href="./images/sprite.svg#menu-close"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container is-open">MENU</div>
           <ul class="site-nav list">
             <li class="item">
               <a class="link header-link current" href="./index.html">Студия</a>
@@ -65,14 +84,14 @@
     <main>
       <!-- hero  start-->
 
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button data-modal-open type="button" class="hero-button">
             Заказать услугу
           </button>
         </div>
-      </section>
+      </section> -->
       <!-- hero end -->
 
       <!-- quality start -->
@@ -157,9 +176,10 @@
           </ul>
         </div>
       </section>
-      <!-- service end-->
+      -->
+      <!-- service end
       <!-- team start -->
-      <section class="section team">
+      <!-- <section class="section team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="card-set team-list list">
@@ -405,11 +425,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- team end -->
 
       <!-- client start-->
-      <section class="section client">
+      <!-- <section class="section client">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="card-set client-list list">
@@ -487,10 +507,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- footer start -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-content">
         <div class="footer-item">
           <a href="" class="logo link"
@@ -596,7 +616,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -680,7 +700,7 @@
         </form>
       </div>
     </div>
-
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
