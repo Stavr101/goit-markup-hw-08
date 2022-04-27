@@ -30,25 +30,7 @@
           <a href="" class="logo link"
             >Web<span class="logo__black">Studio</span></a
           >
-          <button type="button" class="menu-button is-open" data-menu>
-            <svg
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню"
-            >
-              <use
-                class="icon-menu"
-                data-menu-open
-                href="./images/sprite.svg#menu"
-              ></use>
-              <use
-                class="icon-close"
-                data-menu-close
-                href="./images/sprite.svg#menu-close"
-              ></use>
-            </svg>
-          </button>
-          <div class="menu-container is-open">MENU</div>
+
           <ul class="site-nav list">
             <li class="item">
               <a class="link header-link current" href="./index.html">Студия</a>
@@ -77,6 +59,38 @@
             >
           </li>
         </ul>
+
+        <button
+          type="button"
+          class="mobile-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu__container"
+          data-menu
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="icon-menu"
+              data-menu-open
+              href="./images/sprite.svg#menu"
+            ></use>
+            <use
+              class="icon-close"
+              data-menu-close
+              href="./images/sprite.svg#menu-close"
+            ></use>
+          </svg>
+        </button>
+        <div
+          class="mobile-menu__container"
+          id="mobile-menu__container"
+          data-menu
+        >
+          MENU
+        </div>
       </div>
     </header>
 
@@ -700,7 +714,8 @@
         </form>
       </div>
     </div>
-    <script src="./js/mobile-menu.js"></script>
+
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
