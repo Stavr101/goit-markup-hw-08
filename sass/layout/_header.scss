@@ -15,7 +15,7 @@
     margin-bottom: 16px;
 
     @media screen and (min-width: 768px) {
-      margin-right: 93px;
+      // margin-right: 93px;
       margin-right: 88px;
     }
 
@@ -29,10 +29,13 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-nav {
@@ -48,16 +51,16 @@
     margin-right: 50px;
   }
 
-  @include mq(mobile-only) {
-    display: none;
-  }
+  // @include mq(mobile-only) {
+  //   display: none;
+  // }
 
-  @media screen and (min-width: 768px) {
-    .header-link {
-      padding-top: 32px;
-      padding-bottom: 32px;
-    }
-  }
+  // @media screen and (min-width: 768px) {
+  //   .header-link {
+  //     padding-top: 32px;
+  //     padding-bottom: 32px;
+  //   }
+  // }
 }
 
 .header-link {
@@ -93,23 +96,23 @@
     margin-right: 10px;
   }
 
-  @include mq(mobile-only) {
-    display: none;
-  }
-  @media screen and (min-width: 768px) {
-    display: block;
-    .header-link {
-      margin-bottom: 10px;
-    }
-  }
+  // @include mq(mobile-only) {
+  //   display: none;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   display: block;
+  //   .header-link {
+  //     margin-bottom: 10px;
+  //   }
+  // }
 
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    .item:not(:last-child) {
-      margin-right: 50px;
-    }
-    .header-link {
-      margin-bottom: 0px;
-    }
-  }
+  // @media screen and (min-width: 1200px) {
+  //   display: flex;
+  //   .item:not(:last-child) {
+  //     margin-right: 50px;
+  //   }
+  //   .header-link {
+  //     margin-bottom: 0px;
+  //   }
+  // }
 }
