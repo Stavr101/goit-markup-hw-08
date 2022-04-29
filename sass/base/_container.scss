@@ -5,15 +5,25 @@
   margin-right: auto;
   border-color: 1px solid red($color: #000000);
 
-  @media screen and (min-width: 480px) {
+  @include mq(mobile) {
     width: 480px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include mq(tablet) {
     width: 768px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desctop) {
     width: 1200px;
   }
 }
+
+// @media screen and (min-width: 480px) {
+//   width: 480px;
+// @media screen and (min-width: 768px) {
+//   width: 768px;
+// }
+
+// @media screen and (min-width: 1200px) {
+//   width: 1200px;
+// }
