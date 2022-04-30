@@ -5,40 +5,55 @@
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/comand.jpg);
-  background-size: 1600px, cover;
   text-align: center;
+
+  background-image: linear-gradient(var(--hero-gradient)),
+    url(../../images/hero/header-480.jpg);
+  background-size: 480px, cover;
 }
 
-// .hero {
-//   background-image: url();
-// }
-// @media (min-resolution: 2dppx) {
-//   .hero {
-//     background-image: url(./mobile2x.jpg);
-//   }
-// }
-// @media screen and (min-width: 489px) {
-//   .hero {
-//     background-image: url(./tablet.jpg);
-//   }
-//   @media (min-resolution: 2dppx) {
-//   .hero {
-//     background-image: url(./tablet2x.jpg);
-// }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)),
+      url(../../images/hero/header-480@2x.jpg);
+  }
+}
 
-// @media screen and (min-width: 769px) {
-//   .hero {
-//     background-image: url(./desctop.jpg);
-//   }
-//   @media (min-resolution: 2dppx) {
-//   .hero {
-//     background-image: url(./desctop2x.jpg);
-// }
+@include mq(tablet) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)),
+      url(../../images/hero/header-768.jpg);
+    background-size: 768px, cover;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(var(--hero-gradient)),
+        url(../../images/hero/header-768@2x.jpg);
+    }
+  }
+}
+
+@include mq(desctop) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)),
+      url(../../images/hero/header-1200.jpg);
+    background-size: 1200px, cover;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(var(--hero-gradient)),
+        url(../../images/hero/header-1200@2x.jpg);
+    }
+  }
+}
 
 .hero-title {
   max-width: 696px;

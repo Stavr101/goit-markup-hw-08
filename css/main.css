@@ -11,6 +11,7 @@
   --footer-accent-background-color: rgba(255, 255, 255, 0.1);
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --border-contact-form: rgba(33, 33, 33, 0.2);
+  --hero-gradient: rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
 }
 
 .visually-hidden {
@@ -567,6 +568,29 @@ address {
   margin-bottom: 32px;
 }
 
+@media (max-width: 767.98px) {
+  .auth-nav .item:not(:last-child) {
+    margin-top: 32px;
+  }
+  .auth-nav .item:first-child .header-link {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+  .auth-nav .header-tel {
+    color: var(--accent-color);
+  }
+  .auth-nav .item:last-child .header-container {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    margin-bottom: 32px;
+  }
+}
+
 @media (min-width: 768px) {
   .auth-nav .header-link {
     font-size: 12px;
@@ -579,6 +603,7 @@ address {
 @media (min-width: 1200px) {
   .auth-nav .item:not(:last-child) {
     margin-right: 50px;
+    margin-bottom: 0px;
   }
 }
 
@@ -611,7 +636,7 @@ address {
 
 @media (max-width: 767.98px) {
   .auth-nav {
-    flex-direction: column;
+    flex-direction: column-reverse;
     display: flex;
   }
 }
@@ -686,9 +711,41 @@ address {
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/comand.jpg);
-  background-size: 1600px, cover;
   text-align: center;
+  background-image: linear-gradient(var(--hero-gradient)), url(../../images/hero/header-480.jpg);
+  background-size: 480px, cover;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)), url(../../images/hero/header-480@2x.jpg);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)), url(../../images/hero/header-768.jpg);
+    background-size: 768px, cover;
+  }
+}
+
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)), url(../../images/hero/header-768@2x.jpg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)), url(../../images/hero/header-1200.jpg);
+    background-size: 1200px, cover;
+  }
+}
+
+@media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-gradient)), url(../../images/hero/header-1200@2x.jpg);
+  }
 }
 
 .hero-title {

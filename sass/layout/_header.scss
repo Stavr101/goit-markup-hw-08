@@ -280,8 +280,37 @@
   .header-link {
     font-size: 34px;
   }
+
   .item:not(:last-child) {
     margin-bottom: 32px;
+  }
+
+  @include mq(mobile-only) {
+    .item:not(:last-child) {
+      margin-top: 32px;
+    }
+
+    .item:first-child {
+      .header-link {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+      }
+    }
+    .header-tel {
+      color: var(--accent-color);
+    }
+    .item:last-child {
+      .header-container {
+        font-size: 34px;
+        font-weight: 500;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        color: var(--accent-color);
+        margin-bottom: 32px;
+      }
+    }
   }
 
   @include mq(tablet) {
@@ -295,6 +324,7 @@
   @include mq(desctop) {
     .item:not(:last-child) {
       margin-right: 50px;
+      margin-bottom: 0px;
     }
   }
 
@@ -318,7 +348,7 @@
     }
   }
   @include mq(mobile-only) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     display: flex;
   }
 }
