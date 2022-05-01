@@ -1,5 +1,13 @@
 .work-list {
-  --card-item: 3;
+  --card-item: 1;
+
+  @include mq(tablet) {
+    --card-item: 2;
+  }
+
+  @include mq(desctop) {
+    --card-item: 3;
+  }
 }
 
 .work-list__item {
