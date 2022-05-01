@@ -166,21 +166,17 @@ address {
   background-color: #188ce8;
 }
 
-@media screen and (min-width: 1200px) {
-  .card-set {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
-  }
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
-@media screen and (min-width: 1200px) {
-  .card-item {
-    flex-basis: calc(100% / var(--card-item) - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
-  }
+.card-item {
+  flex-basis: calc(100% / var(--card-item) - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .backdrop {
@@ -209,9 +205,9 @@ address {
   top: 50%;
   left: 50%;
   padding: 40px;
-  min-height: 581px;
-  max-width: 528px;
-  width: 100%;
+  width: 450px;
+  min-height: 609px;
+  max-width: 450px;
   border-radius: 4px;
   background-color: var(--secondary-accent-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -219,14 +215,28 @@ address {
   transition: transform var(--transition);
 }
 
+@media (min-width: 1200px) {
+  .modal {
+    min-height: 581px;
+    max-width: 528px;
+    width: 100%;
+  }
+}
+
 .modal-invitation {
   display: block;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.17;
+  line-height: 1.5;
   text-align: center;
   color: var(--primary-title-color);
+}
+
+@media (min-width: 1200px) {
+  .modal-invitation {
+    line-height: 1.17;
+  }
 }
 
 .contact-form__field {
@@ -306,7 +316,16 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 1;
+  font-size: 12px;
+  line-height: 1.17;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .contact-form__checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .contact-form__checkbox__label::before {
@@ -389,6 +408,18 @@ address {
 .social-list {
   display: flex;
   justify-content: space-between;
+}
+
+@media (min-width: 480px) {
+  .team-content .social-list {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .team-content .social-list {
+    justify-content: center;
+  }
 }
 
 .social-list__item:not(:last-child) {
@@ -766,6 +797,22 @@ address {
   padding-bottom: 0;
 }
 
+.feature-list {
+  --card-item: 1;
+}
+
+@media (min-width: 768px) {
+  .feature-list {
+    --card-item: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-list {
+    --card-item: 4;
+  }
+}
+
 .qualiti-item {
   display: flex;
   height: 120px;
@@ -830,6 +877,22 @@ address {
   margin-top: 30px;
 }
 
+.team-list {
+  --card-item: 1;
+}
+
+@media (min-width: 768px) {
+  .team-list {
+    --card-item: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-list {
+    --card-item: 4;
+  }
+}
+
 .team-title {
   margin-bottom: 10px;
   font-weight: 500;
@@ -858,6 +921,7 @@ address {
   --card-item: 6;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .client-link {
@@ -902,20 +966,80 @@ address {
 
 .footer-content {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+}
+
+@media (max-width: 767.98px) {
+  .footer-content {
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .footer-content .footer-item .logo {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-content {
+    flex-direction: row;
+  }
+}
+
+.footer-item {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .footer-item:last-child {
   margin-left: auto;
 }
 
-.footer-item:not(:last-child) {
-  margin-right: 70px;
+@media (min-width: 1200px) {
+  .footer-item {
+    margin-right: 0;
+  }
+  .footer-item:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+
+.footer-item__logo {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .footer-item__logo {
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-item__logo {
+    margin-bottom: 0;
+  }
+}
+
+.footer-item__social {
+  margin-bottom: 60px;
+}
+
+.footer-item__join {
+  display: flex;
+  flex-direction: column;
 }
 
 .adress {
   font-style: normal;
   color: var(--secondary-accent-color);
+}
+
+@media (min-width: 1200px) {
+  .nav-footer {
+    text-align: justify;
+  }
 }
 
 .nav-footer .link {
@@ -928,7 +1052,19 @@ address {
 }
 
 .nav-footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 1200px) {
+  .nav-footer__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-social {
+    display: flex;
+  }
 }
 
 .footer.social-list__link {
@@ -942,15 +1078,22 @@ address {
 
 .social-subscription {
   display: flex;
+  flex-direction: column;
   border-radius: 4px;
   min-width: 358px;
   font-size: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 1200px) {
+  .social-subscription {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    flex-direction: row;
+  }
 }
 
 .mail-subscription {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  margin-right: 12px;
+  margin-bottom: 20px;
   transition: border var(--transition);
 }
 
@@ -959,8 +1102,15 @@ address {
   border-color: var(--accent-color);
 }
 
+@media (min-width: 1200px) {
+  .mail-subscription {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
+
 .mail {
-  min-width: 358px;
+  min-width: 450px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -970,12 +1120,54 @@ address {
   color: var(--secondary-accent-color);
 }
 
+@media (min-width: 1200px) {
+  .mail {
+    min-width: 358px;
+  }
+}
+
 .send-button {
   display: flex;
   padding-left: 0;
   padding-right: 0;
   justify-content: center;
   align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .send-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .send-button {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-button {
+    min-width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    border: none;
+    letter-spacing: 0.06em;
+    background: var(--accent-color);
+    color: var(--secondary-accent-color);
+    transition: background-color var(--transition);
+  }
 }
 
 .join {
@@ -991,6 +1183,12 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-accent-color);
+}
+
+@media (min-width: 1200px) {
+  .join-title {
+    text-align: justify;
+  }
 }
 
 .join-list__link {

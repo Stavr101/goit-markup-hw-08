@@ -1,20 +1,21 @@
 .quality {
   padding-bottom: 0;
 }
+.feature-list {
+  --card-item: 1;
+}
 
-// @media screen and (min-width: 768px) {
-//     display: block;
-//     .header-link {
-//       margin-bottom: 10px;
-//     }
-//   }
+@include mq(tablet) {
+  .feature-list {
+    --card-item: 2;
+  }
+}
 
-//   @media screen and (min-width: 1200px) {
-//     display: flex;
-//     .item:not(:last-child) {
-//       margin-right: 50px;
-//     }
-//   }
+@include mq(desctop) {
+  .feature-list {
+    --card-item: 4;
+  }
+}
 
 .qualiti-item {
   display: flex;

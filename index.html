@@ -242,16 +242,37 @@
       -->
       <!-- service end-->
       <!-- team start -->
-      <!-- <section class="section team">
+      <section class="section team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="card-set team-list list">
             <li class="card-item">
-              <img
-                src="./images/demianenko.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/demianenko-270.jpg    1x,
+                    ./images/team/demianenko-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/demianenko-354.jpg    1x,
+                    ./images/team/demianenko-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/demianenko-450.jpg    1x,
+                    ./images/team/demianenko-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img src="./images/demianenko.jpg" alt="Игорь Демьяненко" />
+              </picture>
               <div class="team-content">
                 <h3 class="team-title">Игорь Демьяненко</h3>
                 <p class="team-text">Product Designer</p>
@@ -308,7 +329,32 @@
               </div>
             </li>
             <li class="card-item">
-              <img src="./images/repina.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/repina-270.jpg    1x,
+                    ./images/team/repina-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/repina-354.jpg    1x,
+                    ./images/team/repina-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/repina-450.jpg    1x,
+                    ./images/team/repina-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img src="./images/repina.jpg" alt="Ольга Репина" />
+              </picture>
               <div class="team-content">
                 <h3 class="team-title">Ольга Репина</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -365,11 +411,32 @@
               </div>
             </li>
             <li class="card-item">
-              <img
-                src="./images/tarasov.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/tarasov-270.jpg    1x,
+                    ./images/team/tarasov-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tarasov-354.jpg    1x,
+                    ./images/team/tarasov-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/tarasov-450.jpg    1x,
+                    ./images/team/tarasov-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+
+                <img src="./images/tarasov.jpg" alt="Николай Тарасов" />
+              </picture>
               <div class="team-content">
                 <h3 class="team-title">Николай Тарасов</h3>
                 <p class="team-text">Marketing</p>
@@ -426,11 +493,32 @@
               </div>
             </li>
             <li class="card-item">
-              <img
-                src="./images/ermakov.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/ermakov-270.jpg    1x,
+                    ./images/team/ermakov-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/ermakov-354.jpg    1x,
+                    ./images/team/ermakov-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/ermakov-450.jpg    1x,
+                    ./images/team/ermakov-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img src="./images/ermakov.jpg" alt="Михаил Ермаков" />
+              </picture>
+
               <div class="team-content">
                 <h3 class="team-title">Михаил Ермаков</h3>
                 <p class="team-text">UI Designer</p>
@@ -488,11 +576,11 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- team end -->
 
       <!-- client start-->
-      <!-- <section class="section client">
+      <section class="section client">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="card-set client-list list">
@@ -570,96 +658,97 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- footer start -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-content">
-        <div class="footer-item">
-          <a href="" class="logo link"
-            >Web<span class="logo__white">Studio</span></a
-          >
-          <address class="adress list">
-            <ul class="nav-footer list">
-              <li class="nav-footer__item">
+        <div class="footer-social">
+          <div class="footer-item footer-item__logo">
+            <a href="" class="logo link"
+              >Web<span class="logo__white">Studio</span></a
+            >
+            <address class="adress list">
+              <ul class="nav-footer list">
+                <li class="nav-footer__item">
+                  <a
+                    class="link"
+                    href="https://goo.gl/maps/tU7hmyQ66fqLJ7Ar8"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="nav-footer__item">
+                  <a class="link" href="mailto:info@example.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="nav-footer__item">
+                  <a class="link" href="tel:+38-099-111-11-11"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-item footer-item__social">
+            <b class="join-title">присоединяйтесь</b>
+
+            <ul class="social-list list">
+              <li class="social-list__item">
                 <a
-                  class="link"
-                  href="https://goo.gl/maps/tU7hmyQ66fqLJ7Ar8"
+                  class="social-list__link link"
+                  href=""
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
-                  г. Киев, пр-т Леси Украинки, 26</a
-                >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="nav-footer__item">
-                <a class="link" href="mailto:info@example.com"
-                  >info@devstudio.com</a
+              <li class="social-list__item">
+                <a
+                  class="social-list__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                 >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="nav-footer__item">
-                <a class="link" href="tel:+38-099-111-11-11"
-                  >+38 096 111 11 11</a
+              <li class="social-list__item">
+                <a
+                  class="social-list__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                 >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a
+                  class="social-list__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <svg class="social-list__icon" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="footer-item">
-          <b class="join-title">присоединяйтесь</b>
-
-          <ul class="social-list list">
-            <li class="social-list__item">
-              <a
-                class="social-list__link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a
-                class="social-list__link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a
-                class="social-list__link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a
-                class="social-list__link link"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-list__icon" width="20" height="20">
-                  <use href="./images/sprite.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-item">
+        <div class="footer-item footer-item__join">
           <b class="join-title">Подпишитесь на рассылку</b>
           <form class="social-subscription">
             <span class="mail-subscription">
@@ -679,7 +768,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">

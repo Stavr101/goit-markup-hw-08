@@ -24,6 +24,17 @@
   justify-content: space-between;
 }
 
+@include mq(mobile) {
+  .team-content .social-list {
+    justify-content: center;
+  }
+}
+@include mq(tablet) {
+  .team-content .social-list {
+    justify-content: center;
+  }
+}
+
 .social-list__item:not(:last-child) {
   margin-right: 10px;
 }
@@ -31,4 +42,3 @@
 .social-list__icon {
   fill: currentColor;
 }
-

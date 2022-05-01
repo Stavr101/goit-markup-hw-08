@@ -11,6 +11,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-accent-color);
+
+  @include mq(desctop) {
+    text-align: justify;
+  }
 }
 
 .join-list__link {

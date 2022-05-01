@@ -9,6 +9,22 @@
   margin-top: 30px;
 }
 
+.team-list {
+  --card-item: 1;
+}
+
+@include mq(tablet) {
+  .team-list {
+    --card-item: 2;
+  }
+}
+
+@include mq(desctop) {
+  .team-list {
+    --card-item: 4;
+  }
+}
+
 .team-title {
   margin-bottom: 10px;
   font-weight: 500;
