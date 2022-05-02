@@ -8,7 +8,7 @@
   text-align: center;
 
   background-image: linear-gradient(var(--hero-gradient)),
-    url(../../images/hero/header-480.jpg);
+    url(../images/hero/header-480.jpg);
   background-size: 480px, cover;
 }
 
@@ -17,14 +17,14 @@
   (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(var(--hero-gradient)),
-      url(../../images/hero/header-480@2x.jpg);
+      url(../images/hero/header-480@2x.jpg);
   }
 }
 
 @include mq(tablet) {
   .hero {
     background-image: linear-gradient(var(--hero-gradient)),
-      url(../../images/hero/header-768.jpg);
+      url(../images/hero/header-768.jpg);
     background-size: 768px, cover;
   }
 
@@ -33,7 +33,7 @@
     (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(var(--hero-gradient)),
-        url(../../images/hero/header-768@2x.jpg);
+        url(../images/hero/header-768@2x.jpg);
     }
   }
 }
