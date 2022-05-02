@@ -41,7 +41,7 @@
 @include mq(desctop) {
   .hero {
     background-image: linear-gradient(var(--hero-gradient)),
-      url(../../images/hero/header-1200.jpg);
+      url(../images/hero/header-1200.jpg);
     background-size: 1200px, cover;
   }
 
@@ -50,7 +50,7 @@
     (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(var(--hero-gradient)),
-        url(../../images/hero/header-1200@2x.jpg);
+        url(../images/hero/header-1200@2x.jpg);
     }
   }
 }
