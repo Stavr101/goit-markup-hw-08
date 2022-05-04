@@ -1,13 +1,21 @@
 .client-list {
-  --card-item: 6;
+  --card-item: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include mq(tablet) {
+    --card-item: 3;
+  }
+
+  @include mq(desctop) {
+    --card-item: 6;
+  }
 }
+
 .client-link {
   outline: none;
   display: flex;
-  width: 170px;
+  width: 100%;
   height: 92px;
   color: var(--client-link);
   border: 1px solid currentColor;

@@ -206,7 +206,7 @@ address {
   top: 50%;
   left: 50%;
   padding: 40px;
-  width: 450px;
+  width: 100%;
   min-height: 609px;
   max-width: 450px;
   border-radius: 4px;
@@ -332,6 +332,7 @@ address {
 
 .contact-form__checkbox__label::before {
   display: inline-flex;
+  flex-shrink: 0;
   content: "";
   width: 16px;
   height: 15px;
@@ -484,12 +485,6 @@ address {
   display: flex;
 }
 
-@media (max-width: 767.98px) {
-  .navigation {
-    margin-top: 48px;
-  }
-}
-
 .site-nav {
   display: flex;
   color: var(--primary-title-color);
@@ -536,7 +531,6 @@ address {
 @media (max-width: 767.98px) {
   .header-link {
     font-size: 40px;
-    padding-left: 40px;
   }
 }
 
@@ -547,14 +541,12 @@ address {
 }
 
 @media (max-width: 767.98px) {
-  .auth {
-    margin-top: 302px;
-  }
   .auth-social__list {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 40px;
-    margin-top: 64px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -20px;
+    margin-top: -20px;
     margin-bottom: 48px;
   }
   .auth-social__item:not(:last-child):after {
@@ -562,7 +554,7 @@ address {
     display: block;
     position: absolute;
     top: 0;
-    right: -10px;
+    right: -18px;
     width: 1px;
     height: 22px;
     border: 1px solid var(--border-contact-form);
@@ -591,20 +583,27 @@ address {
   position: relative;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.auth-social__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .auth-nav {
   margin-left: auto;
-  transition: fill var(--transition), color var(--transition);
+  transition: color var(--transition);
+}
+
+@media (min-width: 768px) {
+  .auth-nav {
+    transition: fill var(--transition);
+  }
 }
 
 .auth-nav .header-link {
-  font-size: 34px;
-}
-
-.auth-nav .item:not(:last-child) {
-  margin-bottom: 32px;
+  font-size: 30px;
 }
 
 @media (max-width: 767.98px) {
@@ -677,6 +676,7 @@ address {
   .auth-nav {
     flex-direction: column-reverse;
     display: flex;
+    margin-bottom: 64px;
   }
 }
 
@@ -715,16 +715,23 @@ address {
 
 .mobile-menu__container {
   background-color: var(--secondary-accent-color);
+  padding: 40px;
   z-index: 5;
   text-align: center;
   font-size: 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition), visibility var(--transition);
 }
 
 .mobile-menu__container.is-open {
-  display: block;
+  display: flex;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 767.98px) {
@@ -733,6 +740,7 @@ address {
     position: absolute;
     top: 0;
     left: 0;
+    height: 100vh;
     width: 100%;
     overflow: scroll;
   }
@@ -744,6 +752,7 @@ address {
     flex-grow: 1;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
   }
 }
 
@@ -752,11 +761,18 @@ address {
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-image: linear-gradient(var(--hero-gradient)), url(../images/hero/header-480.jpg);
   background-size: 480px, cover;
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -797,12 +813,19 @@ address {
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-accent-color);
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .quality {
@@ -930,16 +953,28 @@ address {
 }
 
 .client-list {
-  --card-item: 6;
+  --card-item: 2;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .client-list {
+    --card-item: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .client-list {
+    --card-item: 6;
+  }
+}
+
 .client-link {
   outline: none;
   display: flex;
-  width: 170px;
+  width: 100%;
   height: 92px;
   color: var(--client-link);
   border: 1px solid currentColor;
@@ -976,8 +1011,13 @@ address {
   margin-bottom: 20px;
 }
 
+@media (max-width: 767.98px) {
+  .footer .logo {
+    justify-content: center;
+  }
+}
+
 .footer-content {
-  display: flex;
   flex-direction: column;
 }
 
@@ -995,6 +1035,7 @@ address {
 
 @media (min-width: 1200px) {
   .footer-content {
+    display: flex;
     flex-direction: row;
   }
 }
@@ -1018,24 +1059,14 @@ address {
   }
 }
 
-.footer-item__logo {
-  margin-bottom: 60px;
-}
-
-@media (min-width: 768px) {
-  .footer-item__logo {
-    margin-right: 60px;
+@media (max-width: 767.98px) {
+  .footer-item:not(:last-child) {
+    margin-bottom: 60px;
   }
 }
 
-@media (min-width: 1200px) {
-  .footer-item__logo {
-    margin-bottom: 0;
-  }
-}
-
-.footer-item__social {
-  margin-bottom: 60px;
+.footer-item__social .social-list {
+  justify-content: center;
 }
 
 .footer-item__join {
@@ -1079,6 +1110,16 @@ address {
   }
 }
 
+.footer-social {
+  margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .footer-social {
+    margin-bottom: 0;
+  }
+}
+
 .footer.social-list__link {
   color: var(--secondary-accent-color);
 }
@@ -1092,7 +1133,6 @@ address {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  min-width: 358px;
   font-size: 16px;
 }
 
@@ -1104,14 +1144,16 @@ address {
 }
 
 .mail-subscription {
-  border: 1px solid rgba(255, 255, 255, 0.3);
   margin-bottom: 20px;
-  transition: border var(--transition);
 }
 
-.mail-subscription:hover, .mail-subscription:focus {
-  outline: none;
-  border-color: var(--accent-color);
+@media (min-width: 768px) {
+  .mail-subscription {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1122,7 +1164,8 @@ address {
 }
 
 .mail {
-  min-width: 450px;
+  max-width: 450px;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -1130,6 +1173,13 @@ address {
   outline: none;
   background-color: transparent;
   color: var(--secondary-accent-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: border var(--transition);
+}
+
+.mail:hover, .mail:focus {
+  outline: none;
+  border-color: var(--accent-color);
 }
 
 @media (min-width: 1200px) {

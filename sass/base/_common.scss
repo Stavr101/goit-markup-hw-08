@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+  // outline: 1px solid red;
 }
 
 body {
@@ -41,10 +42,9 @@ img {
 }
 .link {
   text-decoration: none;
-  // color: inherit;
+ 
 }
 
 address {
   font-style: normal;
 }
-

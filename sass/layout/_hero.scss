@@ -3,13 +3,18 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 1600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
 
   background-image: linear-gradient(var(--hero-gradient)),
     url(../images/hero/header-480.jpg);
   background-size: 480px, cover;
+
+  @include mq(desctop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -62,10 +67,15 @@
   margin-right: auto;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-accent-color);
+
+  @include mq(desctop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
