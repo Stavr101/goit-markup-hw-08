@@ -1,120 +1,116 @@
-// .header {
-//   border-bottom: 1px solid #ececec;
-//   .current::after {
-//     content: "";
-//     display: flex;
-//     position: absolute;
-//     bottom: -1px;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: rgba(33, 150, 243, 1);
-//   }
-//   .logo {
-//     margin-top: 16px;
-//     margin-bottom: 16px;
+.header {
+  border-bottom: 1px solid #ececec;
+  .current::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: -1px;
+    // width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(33, 150, 243, 1);
+  }
+  .logo {
+    margin-top: 16px;
+    margin-bottom: 16px;
 
-//     // @include mq (tablet) {
-//     //         margin-right: 88px;
-//     // }
+    @include mq(tablet) {
+      margin-right: 88px;
+    }
 
-//     // @include mq (desctop) {
-//     //   margin-right: 93px;
-//     // }
-//   }
-// }
+    @include mq(desctop) {
+      margin-right: 93px;
+    }
+  }
+}
 
-// .header-container {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
+.header-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-// .nav {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-// }
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-// .site-nav {
-//   display: flex;
+.site-nav {
+  display: flex;
 
-//   color: var(--primary-title-color);
+  color: var(--primary-title-color);
 
-//   .link.current {
-//     color: var(--accent-color);
-//   }
+  .link.current {
+    color: var(--accent-color);
+  }
 
-//   .item:not(:last-child) {
-//     margin-right: 50px;
-//   }
+  .item:not(:last-child) {
+    margin-right: 50px;
+  }
 
-//   // @include mq(mobile-only) {
-//   //   display: none;
-//   // }
+  @include mq(mobile-only) {
+    display: none;
+  }
 
-//   // @media screen and (min-width: 768px) {
-//   //   .header-link {
-//   //     padding-top: 32px;
-//   //     padding-bottom: 32px;
-//   //   }
-//   // }
-// }
+  // @media screen and (min-width: 768px) {
+  //   .header-link {
+  //     padding-top: 32px;
+  //     padding-bottom: 32px;
+  //   }
+  // }
+}
 
-// .header-link {
-//   display: flex;
-//   align-items: center;
-//   position: relative;
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: var(--secondary-text-colo);
-//   transition: color var(--transition);
+.header-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-colo);
+  transition: color var(--transition);
 
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
 
-//   // @media screen and (min-width: 768px) {
-//   //   padding-top: 32px;
-//   //   padding-bottom: 32px;
-//   // }
-// }
+.auth-nav {
+  // display: flex;
+  margin-left: auto;
+  transition: fill var(--transition), color var(--transition);
 
-// .auth-nav {
-//   // display: flex;
-//   margin-left: auto;
-//   transition: fill var(--transition), color var(--transition);
+  // .header-link:not(:last-child) {
+  // }
 
-//   // .header-link:not(:last-child) {
-//   // }
-//   .header-link__icon {
-//     fill: currentColor;
-//     margin-right: 10px;
-//   }
+  .header-link__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
 
-//   // @include mq(mobile-only) {
-//   //   display: none;
-//   // }
-//   // @media screen and (min-width: 768px) {
-//   //   display: block;
-//   //   .header-link {
-//   //     margin-bottom: 10px;
-//   //   }
-//   // }
+  @include mq(mobile-only) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+    .header-link {
+      margin-bottom: 10px;
+    }
+  }
 
-//   // @media screen and (min-width: 1200px) {
-//   //   display: flex;
-//   //   .item:not(:last-child) {
-//   //     margin-right: 50px;
-//   //   }
-//   //   .header-link {
-//   //     margin-bottom: 0px;
-//   //   }
-//   // }
-// }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
+    .header-link {
+      margin-bottom: 0px;
+    }
+  }
+}
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -131,38 +127,23 @@
       background-color: rgba(33, 150, 243, 1);
     }
   }
-
-  .logo {
-    @include mq(mobile-only) {
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
-
-    @include mq(tablet) {
-      margin-right: 88px;
-    }
-
-    @include mq(desctop) {
-      margin-right: 93px;
-    }
-  }
 }
 
-.header-container {
-  display: flex;
-  position: relative;
-  align-items: center;
-}
+// .header-container {
+//   display: flex;
+//   position: relative;
+//   align-items: center;
+// }
 
-.nav {
-  display: flex;
-}
+// .nav {
+//   display: flex;
+// }
 
-@include mq(mobile-only) {
-  // .navigation {
-  //   // margin-top: 48px;
-  // }
-}
+// @include mq(mobile-only) {
+//   .navigation {
+//     margin-top: 48px;
+//   }
+// }
 
 // @include mq(tablet) {
 //   .navigation {
@@ -220,48 +201,36 @@
     font-size: 14px;
   }
 }
-@include mq(mobile-only) {
-  // .auth {
-  //   // margin-top: 302px;
-  // }
 
-  .auth-social__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.auth-social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-    margin-left: -20px;
-    margin-top: -20px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
 
-    margin-bottom: 48px;
-  }
+.auth-social__item:not(:last-child):after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -18px;
+  width: 1px;
+  height: 22px;
+  border: 1px solid var(--border-contact-form);
+}
 
-  .auth-social__item:not(:last-child):after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -18px;
-    width: 1px;
-    height: 22px;
-    border: 1px solid var(--border-contact-form);
-  }
-
-  .auth-list__link {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
-    color: var(--accent-color);
-  }
+.auth-list__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 @include mq(tablet) {
-  .auth {
-    margin-top: 21px;
-    margin-bottom: 21px;
-  }
-
   .auth-social__list {
     display: none;
   }
