@@ -31,6 +31,7 @@
   @include mq(desctop) {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
   }
 }
 
@@ -100,6 +101,7 @@
 @include mq(tablet) {
   .footer-social {
     display: flex;
+    align-items: baseline;
   }
 }
 

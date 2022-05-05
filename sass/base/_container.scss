@@ -3,7 +3,6 @@
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  border-color: 1px solid red($color: #000000);
 
   @include mq(mobile) {
     width: 480px;

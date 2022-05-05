@@ -1,14 +1,23 @@
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(desctop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
-  letter-spacing: 0.03em;
   color: var(--primary-title-color);
+
+  @include mq(desctop) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
