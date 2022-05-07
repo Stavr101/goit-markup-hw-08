@@ -45,6 +45,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -548,9 +552,6 @@ address {
 @media screen and (min-width: 768px) {
   .auth-nav {
     display: block;
-  }
-  .auth-nav .header-link {
-    margin-bottom: 10px;
   }
 }
 
